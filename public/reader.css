@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Bookman';
+  src: url('/fonts/BOOKOS.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Bookman';
+  src: url('/fonts/BOOKOSI.TTF') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Bookman';
+  src: url('/fonts/BOOKOSB.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  color: #231f20 !important;
+  background: transparent !important;
+  font-family: 'Bookman', Georgia, serif;
+  line-height: 1.55;
+}
+
+::selection { background: rgba(251, 176, 64, 0.45); }
+
+.amity-squiggle {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: #434fa1;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background 0.15s ease;
+}
+.amity-squiggle:hover,
+.amity-squiggle.active { background: rgba(67, 79, 161, 0.12); }
+
+.amity-hide-friends .amity-squiggle {
+  text-decoration: none;
+  cursor: auto;
+  background: none;
+}
