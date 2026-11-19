@@ -185,7 +185,7 @@ export type Activity = {
 export const activity: Activity[] = [
   { id: 'a1', friendId: 'juniper', verb: 'left new notes for you in', bookId: 'dungeon-crawler-carl', when: '5h ago', quote: 'The system AI is the funniest character and I will not be taking questions.' },
   { id: 'a2', friendId: 'wren', verb: 'finished a chapter of', title: 'Piranesi', when: '2h ago' },
-  { id: 'a3', friendId: 'theo', verb: 'is reading along with you in', bookId: 'gate-of-the-feral-gods', when: 'yesterday', quote: 'Pretty sure this connects back to the prologue!' },
+  { id: 'a3', friendId: 'theo', verb: 'left you a note in', bookId: 'gate-of-the-feral-gods', when: 'yesterday', quote: "Okay, the ending of this chapter. We need to talk about it when you get there." },
   { id: 'a4', friendId: 'marisol', verb: 'recommended', bookId: 'aquascaping', when: '3 days ago', quote: 'We should try this layout in your tank!' },
   { id: 'a5', friendId: 'priya', verb: 'added to her shelf:', title: 'Legends & Lattes', when: '4 days ago' },
   { id: 'a6', friendId: 'august', verb: 'highlighted 12 passages in', title: 'The House in the Cerulean Sea', when: 'last week' },
