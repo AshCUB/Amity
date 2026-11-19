@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { Link, NavLink } from 'react-router-dom'
 import { FriendsIcon, GearIcon, ProfileIcon } from './Icons'
 import { useSettings } from '../settings'
@@ -7,7 +8,7 @@ export default function Header() {
   return (
     <header className="app-header">
       <Link to="/" className="logo-card" aria-label="Amity home">
-        <img src="/brand/Amity_wordmark.svg" alt="Amity" />
+        <img src={asset('/brand/Amity_wordmark.svg')} alt="Amity" />
       </Link>
       <div className="tagline">
         Amity<span className="divider">|</span>

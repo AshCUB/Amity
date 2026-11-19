@@ -24,7 +24,7 @@ export default function SettingsModal() {
   const reset = () => {
     if (!confirm('This clears your notes, replies, reading progress, and settings saved in this browser. Continue?')) return
     resetDemoData()
-    window.location.href = '/'
+    window.location.href = import.meta.env.BASE_URL
   }
 
   return (

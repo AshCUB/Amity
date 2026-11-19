@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import { SparkleIcon } from '../components/Icons'
@@ -52,7 +53,7 @@ export default function Profile() {
         <h2 className="shelf-heading subheader"><SparkleIcon size={16} /> Your annotations</h2>
         {totalNotes === 0 ? (
           <div className="empty-state">
-            <img src="/brand/yellow_spark.svg" alt="" className="spark" />
+            <img src={asset('/brand/yellow_spark.svg')} alt="" className="spark" />
             <h3>No annotations yet</h3>
             <p>Open a book and select any passage to leave your first note.</p>
             <Link to="/read/dungeon-crawler-carl" className="btn btn-primary">Start annotating</Link>

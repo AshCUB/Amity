@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
@@ -83,7 +84,7 @@ export default function Friends() {
           ))}
           {list.length === 0 && (
             <div className="empty">
-              <img src="/brand/yellow_spark.svg" alt="" className="empty-art spark" />
+              <img src={asset('/brand/yellow_spark.svg')} alt="" className="empty-art spark" />
               {q ? `No friends match "${query}".` : 'Nobody is online right now.'}
             </div>
           )}

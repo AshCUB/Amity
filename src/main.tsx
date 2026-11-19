@@ -12,7 +12,7 @@ import './styles.css'
 
 createRoot(document.getElementById('root')!).render(
   <SettingsProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/friends" element={<Friends />} />

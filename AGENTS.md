@@ -5,7 +5,8 @@ React + TypeScript + Vite app for annotating ebooks with friends (mock data, no 
 ## Commands
 - `npm.cmd run dev` – dev server (http://localhost:5173). Use `npm.cmd` on this machine; PowerShell blocks `npm.ps1`.
 - `npm.cmd run typecheck` – TypeScript check
-- `npm.cmd run build` – typecheck + production build
+- `npm.cmd run build` – typecheck + production build (built for the `/Amity/` base path; check it with `npx.cmd vite preview` at http://localhost:4173/Amity/)
+- Deploy: pushing to `main` runs `.github/workflows/deploy.yml`, publishing to https://ashcub.github.io/Amity/. Reference files in `public/` via `asset()` from `src/asset.ts` (never hard-code `/...` paths), and use relative `url(...)` paths in `public/reader.css`.
 
 ## Layout
 - `src/pages/` – Home, Friends, FriendProfile, Profile, Reader (annotation page, uses epub.js), NotFound

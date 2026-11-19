@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { useState } from 'react'
 import Avatar from './Avatar'
 import { SparkleIcon } from './Icons'
@@ -101,7 +102,7 @@ export default function ReaderPanel(p: Props) {
           </ul>
           {entries.length === 0 && (p.friendIndex || filter === 'mine') && (
             <div className="panel-empty">
-              <img src="/brand/yellow_spark.svg" alt="" className="empty-art spark" />
+              <img src={asset('/brand/yellow_spark.svg')} alt="" className="empty-art spark" />
               {filter === 'mine' ? 'Select some text in the book to leave your first note.' : filter === 'new' ? "You're all caught up!" : 'No notes yet.'}
             </div>
           )}

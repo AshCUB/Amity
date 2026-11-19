@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, Navigate, useParams, useSearchParams } from 'react-router-dom'
 import ePub from 'epubjs'
@@ -192,7 +193,7 @@ export default function Reader() {
       allowScriptedContent: false,
     })
     renditionRef.current = rendition
-    rendition.themes.register('amity', '/reader.css')
+    rendition.themes.register('amity', new URL(asset('reader.css'), window.location.href).href)
     rendition.themes.select('amity')
     rendition.themes.fontSize(TEXT_SIZES[settings.textSize])
 

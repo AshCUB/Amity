@@ -1,3 +1,5 @@
+import { asset } from './asset'
+
 export type Book = {
   id: string
   title: string
@@ -31,8 +33,8 @@ export const books: Book[] = [
     id: 'dungeon-crawler-carl',
     title: 'Dungeon Crawler Carl',
     author: 'Matt Dinniman',
-    file: '/books/dungeon-crawler-carl.epub',
-    cover: '/covers/dungeon-crawler-carl.jpg',
+    file: asset('/books/dungeon-crawler-carl.epub'),
+    cover: asset('/covers/dungeon-crawler-carl.jpg'),
     shelf: 'reading',
     coReaderId: 'juniper',
     mockProgress: 0.18,
@@ -41,8 +43,8 @@ export const books: Book[] = [
     id: 'gate-of-the-feral-gods',
     title: 'The Gate of the Feral Gods',
     author: 'Matt Dinniman',
-    file: '/books/gate-of-the-feral-gods.epub',
-    cover: '/covers/gate-of-the-feral-gods.jpg',
+    file: asset('/books/gate-of-the-feral-gods.epub'),
+    cover: asset('/covers/gate-of-the-feral-gods.jpg'),
     shelf: 'reading',
     coReaderId: 'theo',
     mockProgress: 0.04,
@@ -51,8 +53,8 @@ export const books: Book[] = [
     id: 'aquascaping',
     title: 'Aquascaping',
     author: 'George Farmer',
-    file: '/books/aquascaping.epub',
-    cover: '/covers/aquascaping.jpg',
+    file: asset('/books/aquascaping.epub'),
+    cover: asset('/covers/aquascaping.jpg'),
     shelf: 'recommended',
     coReaderId: 'marisol',
   },

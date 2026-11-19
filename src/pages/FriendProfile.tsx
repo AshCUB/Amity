@@ -1,3 +1,4 @@
+import { asset } from '../asset'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import Header from '../components/Header'
@@ -112,7 +113,7 @@ export default function FriendProfile() {
           shared.map((b) => <SharedBook key={b.id} book={b} friend={friend} />)
         ) : (
           <div className="empty-state">
-            <img src="/brand/yellow_spark.svg" alt="" className="spark" />
+            <img src={asset('/brand/yellow_spark.svg')} alt="" className="spark" />
             <h3>Nothing shared yet</h3>
             <p>You and {friend.name.split(' ')[0]} aren't reading the same book yet. Start one together?</p>
             <div className="chips center">
