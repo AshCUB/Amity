@@ -20,4 +20,5 @@ React + TypeScript + Vite app for annotating ebooks with friends (mock data, no 
 - `public/reader.css` – styles injected into the epub iframe (fonts, squiggle underline)
 
 ## Notes
+- Books must be public domain only (currently Standard Ebooks editions: Alice, The Time Machine, Moby-Dick; covers extracted from each epub's `epub/images/cover.jpg`). Never add copyrighted/purchased ebooks.
 - Body font (Hank Round) lacks curly quotes/ellipsis glyphs; use ASCII `'` and `...` in UI strings.

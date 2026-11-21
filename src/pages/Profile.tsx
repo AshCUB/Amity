@@ -56,7 +56,7 @@ export default function Profile() {
             <img src={asset('/brand/yellow_spark.svg')} alt="" className="spark" />
             <h3>No annotations yet</h3>
             <p>Open a book and select any passage to leave your first note.</p>
-            <Link to="/read/dungeon-crawler-carl" className="btn btn-primary">Start annotating</Link>
+            <Link to="/read/alice" className="btn btn-primary">Start annotating</Link>
           </div>
         ) : (
           perBook

@@ -30,31 +30,31 @@ export type Friend = {
 
 export const books: Book[] = [
   {
-    id: 'dungeon-crawler-carl',
-    title: 'Dungeon Crawler Carl',
-    author: 'Matt Dinniman',
-    file: asset('/books/dungeon-crawler-carl.epub'),
-    cover: asset('/covers/dungeon-crawler-carl.jpg'),
+    id: 'alice',
+    title: "Alice's Adventures in Wonderland",
+    author: 'Lewis Carroll',
+    file: asset('/books/alice.epub'),
+    cover: asset('/covers/alice.jpg'),
     shelf: 'reading',
     coReaderId: 'juniper',
     mockProgress: 0.18,
   },
   {
-    id: 'gate-of-the-feral-gods',
-    title: 'The Gate of the Feral Gods',
-    author: 'Matt Dinniman',
-    file: asset('/books/gate-of-the-feral-gods.epub'),
-    cover: asset('/covers/gate-of-the-feral-gods.jpg'),
+    id: 'time-machine',
+    title: 'The Time Machine',
+    author: 'H. G. Wells',
+    file: asset('/books/time-machine.epub'),
+    cover: asset('/covers/time-machine.jpg'),
     shelf: 'reading',
     coReaderId: 'theo',
     mockProgress: 0.04,
   },
   {
-    id: 'aquascaping',
-    title: 'Aquascaping',
-    author: 'George Farmer',
-    file: asset('/books/aquascaping.epub'),
-    cover: asset('/covers/aquascaping.jpg'),
+    id: 'moby-dick',
+    title: 'Moby-Dick',
+    author: 'Herman Melville',
+    file: asset('/books/moby-dick.epub'),
+    cover: asset('/covers/moby-dick.jpg'),
     shelf: 'recommended',
     coReaderId: 'marisol',
   },
@@ -68,12 +68,12 @@ export const friends: Friend[] = [
     bio: 'Chronic re-reader. Will annotate anything with a pulse and a plot twist.',
     joined: 'March 2025',
     booksRead: 41,
-    favoriteGenres: ['LitRPG', 'Fantasy', 'Comedy'],
+    favoriteGenres: ['Fantasy', 'Comedy', 'Classics'],
     color: '#434fa1',
     status: 'online',
     lastSeen: 'Active now',
     newAnnotations: 7,
-    reading: { bookId: 'dungeon-crawler-carl', title: 'Dungeon Crawler Carl', minutes: 66 },
+    reading: { bookId: 'alice', title: "Alice's Adventures in Wonderland", minutes: 66 },
   },
   {
     id: 'theo',
@@ -87,7 +87,7 @@ export const friends: Friend[] = [
     status: 'online',
     lastSeen: 'Active now',
     newAnnotations: 8,
-    reading: { bookId: 'gate-of-the-feral-gods', title: 'The Gate of the Feral Gods', minutes: 23 },
+    reading: { bookId: 'time-machine', title: 'The Time Machine', minutes: 23 },
   },
   {
     id: 'marisol',
@@ -96,12 +96,12 @@ export const friends: Friend[] = [
     bio: 'Marine biologist by day, aquarium nerd by night. Ask me about shrimp.',
     joined: 'January 2026',
     booksRead: 18,
-    favoriteGenres: ['Nature', 'Non-fiction', 'Cozy mystery'],
+    favoriteGenres: ['Nature', 'Sea stories', 'Cozy mystery'],
     color: '#2f8f83',
     status: 'idle',
     lastSeen: 'Idle · 12m',
     newAnnotations: 5,
-    reading: { bookId: 'aquascaping', title: 'Aquascaping', minutes: 141 },
+    reading: { bookId: 'moby-dick', title: 'Moby-Dick', minutes: 141 },
   },
   {
     id: 'wren',
@@ -185,10 +185,10 @@ export type Activity = {
 }
 
 export const activity: Activity[] = [
-  { id: 'a1', friendId: 'juniper', verb: 'left new notes for you in', bookId: 'dungeon-crawler-carl', when: '5h ago', quote: 'The system AI is the funniest character and I will not be taking questions.' },
+  { id: 'a1', friendId: 'juniper', verb: 'left new notes for you in', bookId: 'alice', when: '5h ago', quote: 'The Cheshire Cat is the funniest character and I will not be taking questions.' },
   { id: 'a2', friendId: 'wren', verb: 'finished a chapter of', title: 'Piranesi', when: '2h ago' },
-  { id: 'a3', friendId: 'theo', verb: 'left you a note in', bookId: 'gate-of-the-feral-gods', when: 'yesterday', quote: "Okay, the ending of this chapter. We need to talk about it when you get there." },
-  { id: 'a4', friendId: 'marisol', verb: 'recommended', bookId: 'aquascaping', when: '3 days ago', quote: 'We should try this layout in your tank!' },
+  { id: 'a3', friendId: 'theo', verb: 'left you a note in', bookId: 'time-machine', when: 'yesterday', quote: "Okay, the ending of this chapter. We need to talk about it when you get there." },
+  { id: 'a4', friendId: 'marisol', verb: 'recommended', bookId: 'moby-dick', when: '3 days ago', quote: 'Skip nothing. Even the whale anatomy chapters. Trust me.' },
   { id: 'a5', friendId: 'priya', verb: 'added to her shelf:', title: 'Legends & Lattes', when: '4 days ago' },
   { id: 'a6', friendId: 'august', verb: 'highlighted 12 passages in', title: 'The House in the Cerulean Sea', when: 'last week' },
 ]
@@ -218,24 +218,24 @@ const genericComments = [
 ]
 
 const commentsByBook: Record<string, string[]> = {
-  'dungeon-crawler-carl': [
-    'Princess Donut supremacy. That is all.',
-    'The system AI is the funniest character and I will not be taking questions.',
-    "Carl's feet deserve their own subplot.",
+  alice: [
+    'The Cheshire Cat is the funniest character and I will not be taking questions.',
+    'Curiouser and curiouser, indeed.',
+    'The Mad Hatter deserves his own book.',
     'This is where I knew I was going to stay up way too late.',
-    "Imagine getting an achievement for this. I'd be mortified.",
+    'Imagine being lectured by a caterpillar. Mortifying.',
   ],
-  'gate-of-the-feral-gods': [
+  'time-machine': [
     'The worldbuilding in this bit is wild.',
-    'Pretty sure this connects back to the prologue!',
-    'Dinniman really loves a chaotic setup, huh.',
+    'Pretty sure this connects back to the dinner party!',
+    'Wells really loves a chaotic setup, huh.',
   ],
-  aquascaping: [
-    'We should try this layout in your tank!',
-    'Note to self: buy more dragon stone.',
-    "So that's why my moss keeps turning brown.",
-    'The rule of thirds, but make it fish.',
-    'I want this exact carpet plant look.',
+  'moby-dick': [
+    'Call me obsessed with this opening.',
+    'Ishmael would have loved a cozy aquarium.',
+    'Okay, the cetology chapter is secretly my favourite.',
+    'Ahab needs a hobby. A different hobby.',
+    'Queequeg and Ishmael are the best found family.',
   ],
 }
 
